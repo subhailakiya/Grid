@@ -1,0 +1,98 @@
+.container{
+    border: 2px solid black;
+    margin :40px;
+    padding:160px 200px;
+}
+
+.grid-item{
+    color: white;
+    font-size: medium;
+    padding: 20px 30px;
+    text-align:center
+}
+.box-1{ background-color: rgba(255, 255, 0, 0.626);}
+.box-2{ background-color: orange;}
+.box-3{ background-color: violet;}
+.box-4{ background-color: rgba(60, 255, 0, 0.764);}
+.box-5{ background-color: rgb(187, 13, 169);}
+.box-6{ background-color: rgb(215, 189, 19);}
+.box-7{ background-color: rgb(98, 35, 214);}
+.box-8{ background-color: rgb(13, 175, 239);}
+.box-9{ background-color: rgb(245, 18, 29);}
+
+.container
+{
+    display: grid;
+    padding:160px 200px;
+/*display: inline-grid; <!-- inline grid is decrease the width and maintain the level change by container width like child width 
+used in menu bar -->
+
+grid-template-columns: 100px 200px 300px 300px; it decrease the table size as pixel */
+ /*grid-template-columns: repeat(3,200px);
+ same process divided as 3 box with same width level it will be easy process time saving 
+
+ grid-template-columns: repeat(3,300px) 400px; /* it divided as 3column with same width but 4th column will be different from 
+ three columns
+
+ grid-template-columns: 1fr 2fr 3fr; /*it takes each column each size in fraction as 1 2 3*
+
+ grid-template-columns: repeat(3,minmax(200px,2fr)); /*minmax speciality is divided in 3 box each box having minimum 200px and 1fr when we 
+                     minimize the page the 200px will not be decrease it maintain the 200px at the end */
+}
+
+/* same the grid-template -row like column
+without using column and row common word is template it takes as row and column 
+1st repeat is row and next is column*/
+.container{
+    display: grid;
+    grid-template:repeat(3,200px)/repeat(3,200px); 
+    /*height: 300px;
+    column-gap: 20px;
+    row-gap: 20px;
+    gap:40px 20px; it take both row and column gap*/
+    /* justify-items: stretch;  /*justify items for horizontal xaxis and align items for vertical y axis 
+                               stretch it fill the gap*
+    justify and align items used for each element                           /
+    justify-items: start;        /*it decrease the size of the box comes in the 1st line*/
+    /* justify-items: end;         /* it decreease th size comes at the end and same as center*/
+    /* align-items: stretch;
+    align-items: start;         like upwards in flex and end like flex end then center
+
+    place-items: center end; it combine the justify and align items in single line center is y axis 1st start is x axis */ 
+
+    /* justify-content :center;
+    using  content to align all the element like container x axis for y axis using align-content
+    align-content: space-around;  
+    commonly used iin justify and align content
+    place-content: start center;*/ 
+
+    /* grid-auto-flow: column; 
+    /*i need to add size in row or column
+    grid-auto-column:100px;*/
+
+}
+.box-1{
+   /* grid-column-start: 1 ;
+   grid-column-end: 3; 
+grid-column: 1/ span 2;
+grid-column-end: span 3;   it take the one box as length into 1 to 3 like 3 grid lines and 2 box if confusion  take as span to indicate 
+the box commonly to make a start and end in single command it start 1 and end 3 means other than one box also take the same 2 column*/
+  grid-row: 1 / span 2;
+
+  grid-column: 1/span 4;
+
+  /* here we use grid-area as common row and column it take grid area:row-start/column-start/row-end/column-end; */
+}
+.box-2{
+    justify-self: start; /*just align the single box in x axis in y axis is align self*/
+    align-self: center;
+    place-self: start end; /*1st align y axis and  justify is 2nd x axis*/
+} 
+
+
+
+
+
+
+
+
